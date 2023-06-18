@@ -2,15 +2,15 @@ let first = [];
 let last = [];
 let rdm;
 let number = 0;
-let currentNumber = 1;
-const totalCells = 16;
 
 
-for (let i = 0; i < totalCells; i++) {
+
+
+for (let i = 0; i < 16; i++) {
     first[i] = i + 1;
 }
 
-for (let i = 0; i < totalCells; i++) {
+for (let i = 0; i < 16; i++) {
     rdm = Math.floor(Math.random() * first.length);
     last[i] = first[rdm];
     first.splice(rdm, 1);
@@ -38,13 +38,13 @@ function table() {
    
 }
 
-
+let currentNumber = 1;
 
 
 function cellClick(event) {
     const cell = event.target
  
-    const selectedNumber = parseInt(cell.innerText);
+    const selectedNumber = parseInt(cell.textContent);
    
     if (selectedNumber === currentNumber) {
         cell.classList.add("clicked");
@@ -78,3 +78,12 @@ function cellClick(event) {
     table();
 
 
+
+
+
+  
+
+
+
+
+ 
