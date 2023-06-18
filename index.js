@@ -3,18 +3,17 @@ let last = [];
 let rdm;
 let number = 0;
 
-
-
-
 for (let i = 0; i < 16; i++) {
     first[i] = i + 1;
 }
+
 
 for (let i = 0; i < 16; i++) {
     rdm = Math.floor(Math.random() * first.length);
     last[i] = first[rdm];
     first.splice(rdm, 1);
 }
+
 
 function table() {
     let tbl = document.getElementById("tbl");
@@ -38,8 +37,8 @@ function table() {
    
 }
 
-let currentNumber = 1;
 
+let currentNumber = 1;
 
 function cellClick(event) {
     const cell = event.target
@@ -58,8 +57,8 @@ function cellClick(event) {
               }
                
               setTimeout(greeting);
-        
         }
+
     } else {
         cell.style.backgroundColor = "red";
        
@@ -71,8 +70,6 @@ function cellClick(event) {
           setTimeout(greeting);
     }
 }
-
-
 
 
     table();
